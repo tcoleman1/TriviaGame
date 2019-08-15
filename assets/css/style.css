@@ -1,0 +1,23 @@
+
+body {
+    background: url("../images/triviagame.jpg") no-repeat center center fixed;
+     background-size: cover; 
+
+
+}
+
+#Trivia-Game{
+
+    height: 400px;
+    margin: 100px 40px 40px 350px;
+    width: 900px;
+    background-color: cornsilk;
+    position: fixed;
+
+}
+
+#title{
+    text-align: center;
+    color: green;
+
+}
