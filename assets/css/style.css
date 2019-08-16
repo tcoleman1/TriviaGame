@@ -8,7 +8,7 @@ body {
 
 #Trivia-Game{
 
-    height: 400px;
+    height: 700px;
     margin: 100px 40px 40px 350px;
     width: 900px;
     background-color: cornsilk;
@@ -19,5 +19,13 @@ body {
 #title{
     text-align: center;
     color: green;
-
+    font-family: 'Shadows Into Light', cursive;
+    font-size: xx-large;
 }
+
+    #time {
+        font-family: 'Permanent Marker', cursive;
+    }
+    
+
+

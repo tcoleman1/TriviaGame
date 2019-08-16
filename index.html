@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script src="text/javascript"></script>
 <link rel="stylesheet" href="assets/css/style.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -12,15 +11,75 @@
        <div id="Trivia-Game">
     <h1 id="title"> Totally Totally Trivia  </h1>
 
-       <div id="time">
-           <p> Time remaining: </p>
-           <p> Sea Otters hold hands when they sleep so they don't drift apart </p>
+       <div>
+           <p id="time"> <b> Time remaining: </b> </p>
+
+         <div id="first-question">
+      
+           <p> Sea Otters hold hands when they sleep so they don't drift apart </p> 
+            <div id="options">
+            <input id= "btnSubmit" type="radio" name="question" value="True"> True <br> 
+            <input id= "btnSubmit" type="radio" name = "question" value ="False"> False <br>
+
+         </div>
+
+         <div id="second-question">
+
            <p> A single cloud can weigh more than 1 million pounds </p>
+              
+           <input type="radio" name="question" value="True"> True <br> 
+           <input type="radio" name = "question" value ="False"> False <br>
+
+         </div>
+
+
+         <div id="third-question">
+           <p> Adults have fewer bones than babies do </p>
+
+           <input type="radio" name="question" value="True"> True <br> 
+           <input type="radio" name = "question" value ="False"> False <br>
+         
+           </div>
+
+
+           <div id="fourth-question">
+         
+
            <p> Cucumbers, Eggplants and bananas are all berries</p>
-            <p> Which is the highest selling product in Walmart? </p>
+
+           <input type="radio" name="question" value="True"> True <br> 
+           <input type="radio" name = "question" value ="False"> False <br>
+
+           </div>
+
+
+           <div id="fifth-question">
+           <p> There are more cells of bacteria in your body than there are human cells</p>
+
+            <input type="radio" name="question" value="True"> True <br> 
+            <input type="radio" name="question" value="False"> False <br> 
+
+            </div>
+
+
+            <div id="sixth-question">
+
+            <p>The popular image of Santa-Claus was invented by Coca-Cola for an ad campaign</p> 
+
+            <input type="radio" name = "question" value ="True"> True <br>
+            <input type="radio" name="question" value="False">  False <br> 
             
+            </div>
+
+
+           
+           </div>  
        </div>
        </div>
        </div>
+
+       <script src="assets/javascript/app.js">
+       </script>
 </body>
+
 </html>
