@@ -12,7 +12,7 @@ body {
     margin: 100px 40px 40px 350px;
     width: 900px;
     background-color: cornsilk;
-    position: fixed;
+    position: relative;
 
 }
 
