@@ -27,6 +27,7 @@ $(document).ready(function () {
         $("#btnSubmit").on("click", function(){
     
             isChecked();
+            correctAnswer();
         });
 
         
@@ -43,11 +44,11 @@ function correctAnswer (){
         correctAnswer++;
         
     }
-        else{
+        else {
             incorrectAnswer++;
         }
         
-   var radionButtonVal2 = $("input[name ='question2']:checked").val();
+   var radioButtonVal2 = $("input[name ='question2']:checked").val();
      
    if(radioButtonVal2 === "True"){
        correctAnswer++;
@@ -57,7 +58,7 @@ function correctAnswer (){
            incorrectAnswer++;
        }
 
-       var radionButtonVal3 = $("input[name ='question3']:checked").val();
+       var radioButtonVal3 = $("input[name ='question3']:checked").val();
      
        if(radioButtonVal3 === "True"){
            correctAnswer++;
@@ -67,7 +68,7 @@ function correctAnswer (){
                incorrectAnswer++;
            }
         
-           var radionButtonVal4 = $("input[name ='question4']:checked").val();
+           var radioButtonVal4 = $("input[name ='question4']:checked").val();
      
    if(radioButtonVal4 === "True"){
        correctAnswer++;
@@ -77,7 +78,7 @@ function correctAnswer (){
            incorrectAnswer++;
        }
 
-       var radionButtonVal5= $("input[name ='question5']:checked").val();
+       var radioButtonVal5= $("input[name ='question5']:checked").val();
      
    if(radioButtonVal5 === "True"){
        correctAnswer++;
@@ -86,6 +87,18 @@ function correctAnswer (){
        else{
            incorrectAnswer++;
        }
+
+       var radioButtonVal6= $("input[name ='question5']:checked").val();
+     
+       if(radioButtonVal6 === "False"){
+           correctAnswer++;
+           
+       }
+           else{
+               incorrectAnswer++;
+           }
+correctText.textContent = "Correct Answers: " + correctAnswer;
+incorrectAnswer.textContent = "Incorrect Answers: " + incorrectAnswer;
 }
 
 //counter = 0;
@@ -173,13 +186,12 @@ $("input[type=radio][name='question1']").change(function () {
 
 
 function submit () {
-    ("#submitQuizButton").click(function() {
-
-        //displayResults();
+    $("#submitQuizButton").on("click", function() {
+        $("#Trivia-Game").hide();
         correctAnswer();
+        $("#GameResults").show();
     })
+
 }
 
 
-correctText.textContent = "Correct Answers: " + correctAnswer;
-incorrectAnswer.textContent = "Incorrect Answers: " + incorrectAnswer;
