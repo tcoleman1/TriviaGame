@@ -9,8 +9,9 @@
 <body>
 
     <div class="container">
-      <div id="startbutton">
-        <button 
+      <!-- <div id="startbutton"> -->
+        <input id="startQuizButton" type="button" value="Start Quiz">
+         
      
        <div id="Trivia-Game">
     <h1 id="title"> Totally Totally Trivia  </h1>
@@ -40,8 +41,8 @@
          <div id="third-question">
            <p> Adults have fewer bones than babies do </p>
 
-           <input id= "btnSubmit5" type="radio" name="question" value="True"> True <br> 
-           <input id= "btnSubmit6" type="radio" name = "question" value ="False"> False <br>
+           <input id= "btnSubmit5" type="radio" name="question3" value="True"> True <br> 
+           <input id= "btnSubmit6" type="radio" name = "question3" value ="False"> False <br>
          
            </div>
 
@@ -51,8 +52,8 @@
 
            <p> Cucumbers, Eggplants and bananas are all berries</p>
 
-           <input id="btnSubmit7" type="radio" name="question" value="True"> True <br> 
-           <input id="btnSubmit8" type="radio" name = "question" value ="False"> False <br>
+           <input id="btnSubmit7" type="radio" name="question4" value="True"> True <br> 
+           <input id="btnSubmit8" type="radio" name = "question4" value ="False"> False <br>
 
            </div>
 
@@ -60,8 +61,8 @@
            <div id="fifth-question">
            <p> There are more cells of bacteria in your body than there are human cells</p>
 
-            <input id="btnSubmit9" type="radio" name="question" value="True"> True <br> 
-            <input id="btnSubmit10" type="radio" name="question" value="False"> False <br> 
+            <input id="btnSubmit9" type="radio" name="question5" value="True"> True <br> 
+            <input id="btnSubmit10" type="radio" name="question5" value="False"> False <br> 
 
             </div>
 
@@ -70,8 +71,8 @@
 
             <p>The popular image of Santa-Claus was invented by Coca-Cola for an ad campaign</p> 
 
-            <input id="btnSubmit11" type="radio" name = "question" value ="True"> True <br>
-            <input id="btnSubmit12"type="radio" name="question" value="False">  False <br> 
+            <input id="btnSubmit11" type="radio" name = "question6" value ="True"> True <br>
+            <input id="btnSubmit12"type="radio" name="question6" value="False">  False <br> 
             
             </div>
 
@@ -81,8 +82,17 @@
            
            </div>  
        </div>
+      
        </div>
        </div>
+      </div>
+      
+      <div id="GameResults">
+          <h1 id="results-title">  Sorry Time's Up!   </h1>
+
+        <p id="correct-text"> Correct Answer:  </p> 
+        <p id="incorrect-text">  Incorrect Answer:  </p>
+
       </div>
 
        <script src="assets/javascript/app.js">

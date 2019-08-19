@@ -30,7 +30,13 @@ body {
 #submitQuizButton {
 
     margin-left: 360px;
-  
+}
+
+#GameResults {
+
+    background-color: cornsilk;
+    height: 200px;
+    width: 400px;
+}
    
 
-}

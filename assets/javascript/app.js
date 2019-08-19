@@ -1,17 +1,31 @@
 var timer;
-var counter = 15;
+var counter = 20;
 var score = 0;
+var correctAnswer = 0;
+var incorrectAnswer = 0;
+
+var correctText = document.getElementById("correct-text");
+var incorrectText = document.getElementById("incorrect-text");
 
 // the start of my game. The document is ready and once I click a button the game will go to the isChecked funtion to make sure I am only able to click
 // one option (true or false) as I move down the question range.
 $(document).ready(function () {
 
-   // $('time').html("" + counter);
+    $("#Trivia-Game").hide();
+    $("#startQuizButton").show();
+    $("#GameResults").hide();
+
+   $("#startQuizButton").on("click", function (){
+
+    $("#startQuizButton").hide();
+    $("#Trivia-Game").show();
+   });
+
+
     function buttonClick (){
 
         $("#btnSubmit").on("click", function(){
     
-         // console.log("You clicked me");
             isChecked();
         });
 
@@ -21,6 +35,58 @@ $(document).ready(function () {
     startGame();
 })
 
+function correctAnswer (){
+
+    var radioButtonVal = $("input[name ='question1']:checked").val();
+     
+    if(radioButtonVal === "True"){
+        correctAnswer++;
+        
+    }
+        else{
+            incorrectAnswer++;
+        }
+        
+   var radionButtonVal2 = $("input[name ='question2']:checked").val();
+     
+   if(radioButtonVal2 === "True"){
+       correctAnswer++;
+       
+   }
+       else{
+           incorrectAnswer++;
+       }
+
+       var radionButtonVal3 = $("input[name ='question3']:checked").val();
+     
+       if(radioButtonVal3 === "True"){
+           correctAnswer++;
+           
+       }
+           else{
+               incorrectAnswer++;
+           }
+        
+           var radionButtonVal4 = $("input[name ='question4']:checked").val();
+     
+   if(radioButtonVal4 === "True"){
+       correctAnswer++;
+       
+   }
+       else{
+           incorrectAnswer++;
+       }
+
+       var radionButtonVal5= $("input[name ='question5']:checked").val();
+     
+   if(radioButtonVal5 === "True"){
+       correctAnswer++;
+       
+   }
+       else{
+           incorrectAnswer++;
+       }
+}
 
 //counter = 0;
 function countDown () {
@@ -29,13 +95,15 @@ function countDown () {
 
     if(counter <= 0) {
         clearInterval(timer);
-     alert("Game over!");
-    //   gameOver();
+
+        $("#Trivia-Game").hide();
+        $("#GameResults").show();
+    
     }
 }
 
 function startGame () {
-    counter = 15;
+    counter = 20;
     timer = setInterval(countDown, 1000);
 }
 
@@ -102,30 +170,16 @@ $("input[type=radio][name='question1']").change(function () {
 });
 }
 
-// function displayResults () {
 
-//     var result = ``;
-//     <p> All done!</p>
-//     <p> Correct Answers :  ${score} </p>
-//     <p> In-correct Answers: + wrongAnswers</p>
-
-
-//     $("#Trivia-game").html(result);
-// }
 
 function submit () {
     ("#submitQuizButton").click(function() {
 
-        displayResults();
+        //displayResults();
+        correctAnswer();
     })
 }
-// $("#start").click(function () {
-//     $(this).hide();
-//     counter = setInterval(countDown, 1000)
-// })
 
 
-// function gameOver() {
-
-//    ("#trivia-game").hide();
-// }
+correctText.textContent = "Correct Answers: " + correctAnswer;
+incorrectAnswer.textContent = "Incorrect Answers: " + incorrectAnswer;
